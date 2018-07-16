@@ -1,7 +1,7 @@
 <?php
 function buildRandomString($type = 1, $length = 4)
 {
-
+    $chars = "";
     if ($type == 1) {
         $chars = join("", range(0, 9));
     } else if ($type == 2) {
@@ -34,17 +34,17 @@ function getUniName()
  */
 function getExt($filename)
 {
-//    $result = explode(".",$filename);
+    $result = explode(".",$filename);
 //    print_r($result);
 //    echo " 1 <br/>";
-//    $str = end($result);
+    $str = end($result);
 //    echo $str." 2 <br/>";
-//    $extStr = strtolower($str);
+    $extStr = strtolower($str);
 //    echo $extStr." 3 <br/>";
-//    return $extStr;
-
-    $extStr = end(explode(".", $filename));
     return $extStr;
+
+//    $extStr = end(explode(".", $filename));
+//    return $extStr;
 }
 
 ?>

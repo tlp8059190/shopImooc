@@ -1,4 +1,10 @@
 <?php
+
+/***
+ * 检查管理员登录是否正确
+ * @param $sql
+ * @return multitype
+ */
 function checkAdmin($sql){
     return fetchOne($sql);
 }
@@ -15,7 +21,6 @@ function checkLogined(){
 /**
  * 注销管理员
  */
-
 function logout(){
 
     $_SESSION[] = array();
@@ -33,6 +38,10 @@ function logout(){
     header("location:login.php");
 }
 
+/***
+ * 添加管理员
+ * @return string
+ */
 function addAdmin(){
     $arr = $_POST;
     $table = "imooc_admin";
@@ -46,12 +55,21 @@ function addAdmin(){
     return $mes;
 }
 
+/***
+ * 得到所有管理员
+ * @return multitype
+ */
 function getAllAdmin(){
     $sql = "select id, username, email from imooc_admin";
     $rows = fetchAll($sql);
     return $rows;
 }
 
+/***
+ * 编辑管理员
+ * @param $id
+ * @return string
+ */
 function editAdmin($id){
     $arr = $_POST;
     $arr['password'] = md5($_POST['password']);
@@ -65,6 +83,11 @@ function editAdmin($id){
     return $mes;
 }
 
+/***
+ * 删除管理员
+ * @param $id
+ * @return string
+ */
 function delAdmin($id){
     $table = 'imooc_admin';
     if(delete($table,"id = {$id}")){
@@ -75,6 +98,12 @@ function delAdmin($id){
     return $mes;
 }
 
+/***
+ * 得到当前页的管理员列表
+ * @param $page
+ * @param int $pageSize
+ * @return multitype
+ */
 function getAdminByPage($page ,$pageSize = 2)
 {
     $offset = ($page - 1) * $pageSize;

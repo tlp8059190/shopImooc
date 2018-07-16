@@ -28,6 +28,7 @@ set_include_path(".".PATH_SEPARATOR.ROOT."/lib".
     require_once 'mysql_func.php';
     require_once 'admin_inc.php';
     require_once 'cate_inc.php';
+    require_once 'pro_inc.php';
 
 //    echo "get_include_path = ".get_include_path()."<br/>";
 ?>

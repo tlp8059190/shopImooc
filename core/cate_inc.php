@@ -1,5 +1,8 @@
 <?php
-
+/***
+ * 添加分类
+ * @return string
+ */
 function addCate()
 {
     $table = "imooc_cate";
@@ -14,6 +17,11 @@ function addCate()
     return $mes;
 }
 
+/***
+ * 编辑分类
+ * @param $id
+ * @return string
+ */
 function editCate($id){
     $table = "imooc_cate";
     $arr = $_POST;
@@ -26,6 +34,11 @@ function editCate($id){
     return $mes;
 }
 
+/***
+ * 删除分类
+ * @param $id
+ * @return string
+ */
 function delCate($id){
     $table = "imooc_cate";
     $where = "id = {$id}";
@@ -41,6 +54,17 @@ function getCateByPage($page ,$pageSize = 2)
 {
     $offset = ($page - 1) * $pageSize;
     $sql = "select * from imooc_cate limit {$offset},{$pageSize}";
+    $rows = fetchAll($sql);
+    return $rows;
+}
+
+/***
+ * 得到所有分类
+ * @return multitype
+ */
+
+function getAllCate(){
+    $sql = "select id, cName from imooc_cate";
     $rows = fetchAll($sql);
     return $rows;
 }

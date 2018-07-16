@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="03c0dbdc-33a3-4a4a-8d2b-665568966562" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/admin/doAdminAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/doAdminAction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/uploads/07861083c2e8e7d9f63bb8e0edb7cd20.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/uploads/0c14ca6ed080e92402c23d35af96556d.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/uploads/0c685612472ff1add958ba3048633025.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/uploads/1881bb9f44bd1bbad25a9085b1aaa3d5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/uploads/407865ba90f0df80822f6a1900f4c7d1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/uploads/40c194c5adf567527071d675b48baeb9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/uploads/49659aecbb2aa7e99cd59cac8ea2a8a5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/uploads/49e5fbfbfbb74fe237988c18f8c37585.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/uploads/511736465de28bc9d6fc730238d53c34.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/uploads/5677a769720af6854e18e3c6d91f5bf3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/uploads/5b7930a28c1bbf9fca0463bcea1f1b56.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/uploads/5e7852468c96b4cb0763e5f47991f351.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/uploads/6fe87551772f79fb88ed1ca16b77d2c3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/uploads/7148d9fb2125ae1d117bc48e917b6d13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/uploads/75a9f473e7b087dcc25770d8f58d0370.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/uploads/78e21378d2a43de2cf4a0dacfb0de6a1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/uploads/7ec55f75f39e03ee8546a3ec1ab43f83.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/uploads/9a77eb963b97a8c20163f656f6e52c7b.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/uploads/9b9143ba02c8d432fae6276dd33bd499.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/uploads/ab9808c175b70c9ccbb16305584c6110.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/uploads/ad643c1df5effa36c559c8548d55f3ee.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/uploads/bf4dddfbbd8fe3c5b87c2453a983ce5e.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/uploads/c1c9c2607fbc4b9ccf3a73d07f953680.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/uploads/c32cd29977b460f8bcbb45b8286de347.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/uploads/d70ad5fc301a19c0ddf8d6e82d3e24e7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/uploads/d8afc7db49cf96357c5dd587d12336d8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/uploads/d8b335e57c1a754c92e0d971cb6016c7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/uploads/ed50987c9544d26772f56b36de636acf.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/uploads/ee5d87a7d6a3bd0eb4febd39485d5987.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/uploads/f2b60ce8bb961e5f171e23d03ba8dd87.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/uploads/f6339c7b3eec18dd2526ff26008bd56b.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/uploads/f8d506bb6488955e77ad661caf049374.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/admin_inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/admin_inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/cate_inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/cate_inc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include.php" beforeDir="false" afterPath="$PROJECT_DIR$/include.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/image_func.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/image_func.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/mysql_func.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/mysql_func.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/string_func.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/string_func.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/upload_func.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/upload_func.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/doAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/test/doAction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/test/upload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/uploads/10f75580749fa93169f7736e1d16533a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/uploads/1348d322013564b10abe14c88241ed40.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/uploads/1d6244e61236a700a5d46a8e6eeb8d8d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/uploads/2a69d4d01f1c161cb3ff4c222c9a136b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/uploads/56d7cf60f94a88b1d78b00b26098e8b1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/uploads/78d3f40d52f58425abbe1c48dc032f4f.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/uploads/861f20ab747bd4a44a14eaf1d5cf1e36.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/uploads/a2c6ff552b5472ceefdb52f28e93e0bc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/uploads/aa6316e36db2d6f5d0ed0dce0e697687.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/uploads/c078aa28c34ac74b72ee6a6acb462397.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/uploads/eb1e43abd0a84bdb871d1c9d8b6d9f6c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/uploads/微信截图_20180704193135.png" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="10" />
+    <option name="y" value="20" />
+    <option name="width" value="1346" />
+    <option name="height" value="688" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="03c0dbdc-33a3-4a4a-8d2b-665568966562" name="Default" comment="" />
+      <created>1531733631728</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1531733631728</updated>
+      <workItem from="1531733636784" duration="596000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="596000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="10" y="20" width="1346" height="688" extended-state="7" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24962406" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+</project>

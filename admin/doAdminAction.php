@@ -20,6 +20,8 @@ if($act == "logout"){
 }else if($act == "delCate"){
     $id = $_REQUEST['id'];
     $mes = delCate($id);
+}else if($act == "addPro"){
+    $mes = addPro();
 }
 
 ?>
