@@ -83,11 +83,8 @@ function verifyImage($type = 1, $length = 4, $pixel = 0, $line = 0, $sess_name =
 function resizeImage($filename, $destination = null, $isReservedSource = true, $dst_w = null, $dst_h = null, $scale = 0.5)
 {
 //    echo "<br/>image_func.php------resizeImage()----start<br/>";
-    $desfilename = getUniName() . "." . getExt($filename);
     if ($destination == null) {
-        $destination = $desfilename;
-    } else {
-        $destination = $destination . "/" . $desfilename;
+        $destination =  getUniName() . "." . getExt($filename);
     }
     list($src_w, $src_h, $imagetype) = getimagesize($filename);
     if (is_null($dst_w) || is_null($dst_h)) {

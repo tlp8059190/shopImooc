@@ -40,12 +40,22 @@ function editCate($id){
  * @return string
  */
 function delCate($id){
+    $mes = "";
     $table = "imooc_cate";
-    $where = "id = {$id}";
-    if (delete($table, $where)){
-        $mes = "删除成功！<a href = 'listCate.php?page=1'>查看列表</a>";
+    $res = checkProExt($id);
+    var_dump($res);
+//    exit(0);
+    if(empty($res)){
+        alertMes("不能删除分类，请先删除该分类下的商品！","listPro.php");
     }else{
-        $mes = "删除失败！<a href = 'listCate.php?page=1'>查看列表</a>";
+//        echo "可以删除<br/>";
+//        exit(0);
+        $where = "id = {$id}";
+        if (delete($table, $where)){
+            $mes = "删除成功！<a href = 'listCate.php?page=1'>查看列表</a>";
+        }else{
+            $mes = "删除失败！<a href = 'listCate.php?page=1'>查看列表</a>";
+        }
     }
     return $mes;
 }

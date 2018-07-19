@@ -1,11 +1,12 @@
 <?php
-
+$link = null;
 /**
  * 连接数据库
  * @return resource
  */
 function connect()
 {
+    global $link;
     $link = mysqli_connect(DB_HOST, DB_USER, DB_PWD) or
     die("连接失败Error:" . mysqli_connect_errno() . ":" . mysqli_connect_error());
     mysqli_set_charset($link, DB_CHARSET);
@@ -21,7 +22,8 @@ function connect()
  */
 function insert($table, $array)
 {
-    $link = connect();
+    global $link;
+//    $link = connect();
     $keys = join(",", array_keys($array));
     $values = "'" . join("','", array_values($array)) . "'";
     $sql = "insert into {$table} ($keys) value ({$values})";
@@ -45,7 +47,8 @@ function insert($table, $array)
  */
 function update($table, $array, $where = null)
 {
-    $link = connect();
+    global $link;
+//    $link = connect();
     $str = "";
     foreach ($array as $key => $val) {
         if (empty($str)) {
@@ -82,7 +85,8 @@ function update($table, $array, $where = null)
  */
 function delete($table, $where = null)
 {
-    $link = connect();
+    global $link;
+//    $link = connect();
     $sql = "delete from {$table} ";
     if ($where != null) {
         $sql .= " where {$where} ";
@@ -106,7 +110,8 @@ function delete($table, $where = null)
  */
 function fetchAll($sql, $resultType = MYSQLI_ASSOC)
 {
-    $link = connect();
+    global $link;
+//    $link = connect();
     $result = mysqli_query($link, $sql);
 //    echo "result:<br/>";
 //    print_r($result);
@@ -116,7 +121,7 @@ function fetchAll($sql, $resultType = MYSQLI_ASSOC)
             $rows[] = $row;
         }
     }else{
-        $rows[] = array();
+        $rows = array();
     }
 //    echo "rows:<br/>";
 //    print_r($rows);
@@ -132,7 +137,8 @@ function fetchAll($sql, $resultType = MYSQLI_ASSOC)
  */
 function fetchOne($sql, $resultType = MYSQLI_ASSOC)
 {
-    $link = connect();
+    global $link;
+//    $link = connect();
     $result = mysqli_query($link, $sql);
 //    echo "result:<br/>";
 //    print_r($result);
@@ -154,9 +160,15 @@ function fetchOne($sql, $resultType = MYSQLI_ASSOC)
 * @return number
 */
 function getResultNum($sql){
-    $link = connect();
+    global $link;
+//    $link = connect();
     $result = mysqli_query($link,$sql);
-    $num = mysqli_num_rows($result);
+    if(empty($result)){
+        return null;
+    }else{
+        $num = mysqli_num_rows($result);
+    }
+
 //    echo "num :<br/> {$num} <br/>";
     return $num;
 }
@@ -166,7 +178,9 @@ function getResultNum($sql){
 * @return number
 */
 function getInsertID(){
-    $link = connect();
+    global $link;
+//    $link = connect();
+//    mysqli_query($link,"insert into imooc_cate (cName) values ('asdasd2')");
     $tmpID = mysqli_insert_id($link);
 //    echo "id :<br/> {$tmpID} <br/>";
     return $tmpID;

@@ -1,6 +1,6 @@
 <?php
 
-require_once '../lib/string_func.php';
+//require_once '../lib/string_func.php';
 
 //print_r($_FILES);
 //echo "<br/>";
@@ -44,8 +44,8 @@ function buildInfo()
             $i += $sum;
         }
     }
-    print_r($filesInfo);
-    echo "<br/> ********** <br/>";
+//    print_r($filesInfo);
+//    echo "<br/> ********** <br/>";
     return $filesInfo;
 }
 
@@ -63,17 +63,20 @@ function uploadFiles($path = "uploads", $allowExt = array("gif", "jpeg", "png", 
     $i = 0;
     $fileNames = array();
     $filesInfo = buildInfo();
-    foreach ($filesInfo as $file) {
-         $result = uploadFile($file, $path, $allowExt, $maxSize, $imgFlag);
-         if($result['flag'] == true){
-             $test[$i] = $file['name'];
-             $fileNames[$i++]['name'] = $result['fileName'];
-         }
+    if(!empty($filesInfo)){
+        foreach ($filesInfo as $file) {
+            $result = uploadFile($file, $path, $allowExt, $maxSize, $imgFlag);
+            if($result['flag'] == true){
+                $test[$i] = $file['name'];
+                $fileNames[$i++]['name'] = $result['fileName'];
+            }
 //         echo "<br/>test:<br/>";
 //         print_r($test);
 //         echo "<br>filename:<br>";
 //         print_r($fileNames);
+        }
     }
+
 
 //    echo "<br/>upload_func.php------uploadFiles()----end<br/>";
     return $fileNames;

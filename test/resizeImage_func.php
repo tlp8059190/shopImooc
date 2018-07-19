@@ -2,10 +2,10 @@
 require_once '../include.php';
 $filename = "des_big.jpg";
 
-resizeImage($filename, "image-50", true, 50, 50);
-resizeImage($filename, "image-150", true, 200, 200);
-resizeImage($filename, "image-250", true, 350, 350);
-resizeImage($filename, "image-350", true, 400, 500);
+resizeImage($filename, "image-50"."/".$filename, true, 50, 50);
+resizeImage($filename, "image-150"."/".$filename, true, 200, 200);
+resizeImage($filename, "image-250"."/".$filename, true, 350, 350);
+resizeImage($filename, "image-350"."/".$filename, true, 400, 500);
 /***
  * 生产缩略图
  * @param $filename

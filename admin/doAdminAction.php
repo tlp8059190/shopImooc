@@ -22,6 +22,20 @@ if($act == "logout"){
     $mes = delCate($id);
 }else if($act == "addPro"){
     $mes = addPro();
+}else if($act == "editPro"){
+    $id = $_REQUEST['id'];
+    $mes = editPro($id);
+}else if($act == "delPro"){
+    $id = $_REQUEST['id'];
+    $mes = delPro($id);
+}else if($act == "addUser"){
+    $mes = addUser();
+}else if($act == "editUser"){
+    $id = $_REQUEST['id'];
+    $mes = editUser($id);
+}else if($act == "delUser"){
+    $id = $_REQUEST['id'];
+    $mes = delUser($id);
 }
 
 ?>

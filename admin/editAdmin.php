@@ -3,7 +3,7 @@
     $id = $_REQUEST['id'];
     $sql = "select id,username, password, email from imooc_admin where id = '{$id}'";
     $row = fetchOne($sql);
-    print_r($row);
+//    print_r($row);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>

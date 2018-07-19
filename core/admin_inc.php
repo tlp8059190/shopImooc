@@ -112,4 +112,60 @@ function getAdminByPage($page ,$pageSize = 2)
     return $rows;
 }
 
+function addUser(){
+    $arr=$_POST;
+    $arr['password']=md5($_POST['password']);
+    $arr['regTime']=time();
+    $uploadFile=uploadFiles("uploads");
+//    print_r($uploadFile);
+//    exit(0);
+    if($uploadFile&&is_array($uploadFile)){
+        $arr['face']=$uploadFile[0]['name'];
+    }else{
+        return "添加失败<a href = 'addUser.php' >重新添加</a>";
+    }
+//	print_r($arr);exit;
+    if(insert("imooc_user", $arr)){
+        $mes="添加成功!<br/><a href='addUser.php'>继续添加</a>|<a href='listUser.php'>查看列表</a>";
+    }else{
+        $filename="uploads/".$uploadFile[0]['name'];
+        if(file_exists($filename)){
+            unlink($filename);
+        }
+        $mes="添加失败!<br/><a href='addUser.php'>重新添加</a>|<a href='listUser.php'>查看列表</a>";
+    }
+    return $mes;
+}
+
+function getUserByPage($page ,$pageSize = 2)
+{
+    $offset = ($page - 1) * $pageSize;
+    $sql = "select * from imooc_user limit {$offset},{$pageSize}";
+    $rows = fetchAll($sql);
+    return $rows;
+}
+
+function editUser($id){
+    $arr = $_POST;
+    $arr['password'] = md5($_POST['password']);
+    $table = 'imooc_User';
+    $where = "id= {$id}";
+    if(update($table,$arr,$where)){
+        $mes = "编辑成功！<br/><a href = 'listUser.php?page=1'>查看用户列表</a>";
+    }else{
+        $mes = "编辑失败！<br/><a href = 'listUser.php?page=1'>请重新修改</a>";
+    }
+    return $mes;
+}
+
+function delUser($id){
+    $table = 'imooc_User';
+    if(delete($table,"id = {$id}")){
+        $mes = "删除成功！<br/><a href = 'listUser.php?page=1'>查看用户列表</a>";
+    }else{
+        $mes = "删除失败！<br/><a href = 'listUser.php?page=1'>请重新删除</a>";
+    }
+    return $mes;
+}
+
 ?>

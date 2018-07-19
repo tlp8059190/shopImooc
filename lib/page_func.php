@@ -1,25 +1,26 @@
 <?php
-    require_once '../include.php';
+    require_once 'mysql_func.php';
 
-//    $pageSize = 2;
-//    $totalPages = getTotalPages($pageSize);
-////    $page = $_REQUEST['page']?(int)$_REQUEST['page']:1;
-//    $page = 2;
-//    if($page < 1 || $page == null || !is_numeric($page)){
-//        $page = 1;
-//    }else if($page > $totalPages ){
-//        $page = $totalPages;
-//    }
-//    $offset = ($page-1)*$pageSize;
-//    $sql = "select * from imooc_admin limit {$offset},{$pageSize}";
-//    $rows = fetchAll($sql);
-//    print_r($rows);
-//    echo "<br/>";
-//    foreach($rows as $row){
-//        echo "编号：".$row['id'],"<br/>";
-//        echo "管理员的名称:".$row['username'],"<hr/>";
-//    }
-//    echo showPage($page,$totalPages,"cid=5");
+/*    $pageSize = 2;
+    $totalPages = getTotalPages($pageSize);
+//    $page = $_REQUEST['page']?(int)$_REQUEST['page']:1;
+    $page = 2;
+    if($page < 1 || $page == null || !is_numeric($page)){
+        $page = 1;
+    }else if($page > $totalPages ){
+        $page = $totalPages;
+    }
+    $offset = ($page-1)*$pageSize;
+    $sql = "select * from imooc_admin limit {$offset},{$pageSize}";
+    $rows = fetchAll($sql);
+    print_r($rows);
+    echo "<br/>";
+    foreach($rows as $row){
+        echo "编号：".$row['id'],"<br/>";
+        echo "管理员的名称:".$row['username'],"<hr/>";
+    }
+    echo showPage($page,$totalPages,"cId=5");
+*/
 function getTotalPages($pageSize = 2,$table){
     $sql = "select * from {$table}";
     $totalRows = getResultNum($sql);
@@ -30,7 +31,11 @@ function getTotalPages($pageSize = 2,$table){
 }
 
 function getCurPage($totalPages){
-    $page = $_REQUEST['page']?(int)$_REQUEST['page']:1;
+    if(!isset($_REQUEST['page']) || empty($_REQUEST['page'])){
+        $page =1;
+    }else{
+        $page = $_REQUEST['page']?(int)$_REQUEST['page']:1;
+    }
 //    echo "page:".$page."<br/>";
     if ($page < 1 || $page == null || !is_numeric($page)) {
         $page = 1;

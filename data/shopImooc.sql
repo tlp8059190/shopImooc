@@ -31,7 +31,7 @@ create table `imooc_pro`(
     `pubTime` int unsigned not null,
     `isShow` tinyint(1) default 1,
     `isHot` tinyint(1) default  0,
-    `cid` smallint unsigned not null
+    `cId` smallint unsigned not null
 );
 
 --用户表
