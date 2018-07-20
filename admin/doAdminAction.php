@@ -36,6 +36,12 @@ if($act == "logout"){
 }else if($act == "delUser"){
     $id = $_REQUEST['id'];
     $mes = delUser($id);
+}else if($act == "waterText"){
+    $id = $_REQUEST['id'];
+    $mes = doWaterText($id);
+}else if($act == "waterPic"){
+    $id = $_REQUEST['id'];
+    $mes = doWaterPic($id);
 }
 
 ?>

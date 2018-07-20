@@ -168,4 +168,46 @@ function delUser($id){
     return $mes;
 }
 
+function doWaterText($id){
+    $rows = getAllImgByProId($id);
+//    print_r($rows);
+//    exit(0);
+    foreach ($rows as $row){
+        $filename = "uploads/".$row['albumPath'];
+        waterText($filename);
+        $filename = "image_50/".$row['albumPath'];
+        waterText($filename);
+        $filename = "image_150/".$row['albumPath'];
+        waterText($filename);
+        $filename = "image_350/".$row['albumPath'];
+        waterText($filename);
+        $filename = "image_520/".$row['albumPath'];
+        waterText($filename);
+    }
+    $mes = "添加成功";
+    return $mes;
+}
+
+function doWaterPic($id){
+    $rows = getAllImgByProId($id);
+//    print_r($rows);
+//    exit(0);
+    foreach ($rows as $row){
+        $filename = "uploads/".$row['albumPath'];
+        waterPic($filename);
+        $filename = "image_50/".$row['albumPath'];
+        waterPic($filename);
+        $filename = "image_150/".$row['albumPath'];
+        waterPic($filename);
+        $filename = "image_350/".$row['albumPath'];
+        waterPic($filename);
+        $filename = "image_520/".$row['albumPath'];
+        waterPic($filename);
+    }
+    $mes = "添加成功";
+    return $mes;
+}
+
+
+
 ?>

@@ -32,6 +32,7 @@ require_once 'cate_inc.php';
 require_once 'pro_inc.php';
 require_once 'album_inc.php';
 require_once 'upload_func.php';
+require_once 'user_inc.php';
 
 connect();
 

@@ -78,7 +78,7 @@ function getAllPros(){
 
 function getAllImgByProId($id){
     $sql = "select a.albumPath from imooc_album a where pid = {$id}";
-    echo $sql;
+//    echo $sql;
     $rows = fetchAll($sql);
     return $rows;
 }
@@ -242,6 +242,12 @@ function delPro($id){
  * */
 function checkProExt($cId){
     $sql = "select * from imooc_pro where cId ={$cId}";
+    $rows = fetchAll($sql);
+    return $rows;
+}
+
+function getProInfo(){
+    $sql = "select id,pName from imooc_pro order by id asc";
     $rows = fetchAll($sql);
     return $rows;
 }

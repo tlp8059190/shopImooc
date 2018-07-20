@@ -1,11 +1,18 @@
 <?php
 require_once '../include.php';
-
+global $link;
 $username = $_POST['username'];
+//$username = addslashes($username);
+$username = mysqli_escape_string($link,$username);
 $password = md5($_POST['password']);
 $verify = $_POST['verify'];
 $verify1 = $_SESSION['verify'];
-$autoFlag = $_POST['autoFlag'];
+if(isset($_POST['aotuFlag']) && !empty($_POST['aotuFlag'])){
+    $autoFlag = $_POST['autoFlag'];
+}else{
+    $autoFlag = null;
+}
+
 
 
 //echo "username :<br/> {$username} <br/>";

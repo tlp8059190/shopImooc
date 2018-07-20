@@ -123,4 +123,60 @@ function resizeImage($filename, $destination = null, $isReservedSource = true, $
     return $destination;
 }
 
+/***
+ * 文字水印
+ * @param $filename
+ * @param string $fontfile
+ * @param string $text
+ */
+function waterText($filename,$fontfile = "D:/MyPHP/shopImooc/fonts/SIMYOU.TTF",$text="imooc.com")
+{
+//    echo "<br/>image_func.php-------waterText()-------start<br/>";
+//    $filename = "D:/MyPHP/shopImooc/admin/".$filename;
+    $fileInfo = getimagesize($filename);
+//    print_r($fileInfo);
+//    echo "<br/>image_func.php-------waterText()-------1<br/>";
+
+    $mime = $fileInfo['mime'];
+    $createFun = str_replace("/", "createfrom", $mime);
+    $outFun = str_replace("/", null, $mime);
+//    echo "<br/>image_func.php-------waterText()-------2<br/>";
+    $image = $createFun($filename);
+//    var_dump($image);
+//    echo "<br/>image_func.php-------waterText()-------3<br/>";
+
+    $color = imagecolorallocatealpha($image, 255, 0, 0, 100);
+    imagettftext($image, 124, 0, 0, 124, $color, $fontfile, $text);
+
+//    header("content-type:" . $mime);
+    $outFun($image,$filename);
+    imagedestroy($image);
+}
+
+/***
+ * 图片水印
+ * @param $dstFile
+ * @param string $srcFile
+ */
+function waterPic($dstFile, $srcFile = "../logo.jpg")
+{
+    $srcFileInfo = getimagesize($srcFile);
+    $dstFileInfo = getimagesize($dstFile);
+    $src_w = $srcFileInfo[0];
+    $src_h = $srcFileInfo[1];
+    $srcMime = $srcFileInfo['mime'];
+    $dstMime = $dstFileInfo['mime'];
+    $createSrcFun = str_replace("/", "createfrom", $srcMime);
+    $createDstFun = str_replace("/", "createfrom", $dstMime);
+    $outDstFun = str_replace("/", null, $dstMime);
+    $src_image = $createSrcFun($srcFile);
+    $dst_image = $createDstFun($dstFile);
+    imagecopymerge($dst_image, $src_image, 0, 0, 0, 0, $src_w, $src_h, 100);
+//    header("content-type:" . $dstMime);
+//    $dstFilePath = "../".$dstFile;
+    $outDstFun($dst_image,$dstFile);
+    imagedestroy($src_image);
+    imagedestroy($dst_image);
+}
+
 ?>
